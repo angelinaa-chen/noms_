@@ -11,8 +11,16 @@ import UIKit
 class SavedViewController: UIViewController {
     
     // MARK: - Properties (view)
+    private var collectionView: UICollectionView!
+    private let pageLabel = UILabel()
     
-    private let nameLabel = UILabel()
+    // MARK: - Properties (data)
+    private var noms: [Nom] = [
+        Nom(name: "Avocado Toast", image: "food_image", meal: "Breakfast", description: "This was really good"),
+        Nom(name: "French Toast", image: "food_image", meal: "Breakfast", description: "This was really good"),
+        Nom(name: "Caesar Salad", image: "food_image", meal: "Lunch", description: "This was really good")
+
+    ]
     
     // MARK: - viewDidLoad
     override func viewDidLoad() {
@@ -20,24 +28,103 @@ class SavedViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
         
-        setupNameLabel()
+        setupPageLabel()
+        setupCollectionView()
     }
     
     // MARK: - Set Up Views
     
-    private func setupNameLabel() {
-        nameLabel.text = "Saved"
-        nameLabel.font = .systemFont(ofSize: 24)
-        nameLabel.textColor = UIColor.black
+    
+    private func setupPageLabel() {
+        pageLabel.text = "Saved Noms"
+        pageLabel.font = UIFont.boldSystemFont(ofSize: 24)
+        pageLabel.textColor = UIColor.a3.coral
         
-        view.addSubview(nameLabel)
-        nameLabel.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(pageLabel)
+        pageLabel.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            nameLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            nameLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+            pageLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: -16),
+            pageLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 24),
+//            munchLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
     }
     
+    private func setupCollectionView() {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        layout.minimumLineSpacing = 16
+//        layout.minimumInteritemSpacing = 30
+        
+        collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.register(SavedCollectionViewCell.self, forCellWithReuseIdentifier: SavedCollectionViewCell.reuse)
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        
+        collectionView.backgroundColor = UIColor.white
+        
+        view.addSubview(collectionView)
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        
+//        NSLayoutConstraint.activate([
+//            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 32),
+//            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -32),
+//            collectionView.topAnchor.constraint(equalTo: pageLabel.topAnchor, constant: 24),
+//            collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -10)
+//        ])
+        NSLayoutConstraint.activate([
+            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
+            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
+            collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 24),
+            collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -10)
+        ])
+    }
+    
+}
+
+// MARK: - UICollectionViewDelegate
+
+extension SavedViewController: UICollectionViewDelegate { }
+
+// MARK: - UICollectionViewDataSource
+
+extension SavedViewController: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return noms.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SavedCollectionViewCell.reuse, for: indexPath) as? SavedCollectionViewCell else {
+            return UICollectionViewCell()
+        }
+        
+//        cell.redButton.tag = indexPath.row
+//        cell.redButton.addTarget(self,action: #selector(self.pushProfile),
+//            for: .touchUpInside)
+        
+        cell.configure(nom: noms[indexPath.row])
+        
+        return cell
+    }
+//    
+//    @objc private func pushProfile() {
+//        let ProfilePostViewController = ProfilePostViewController()
+//                                             
+//        self.navigationController?.pushViewController(ProfilePostViewController, animated: true)
+//    }
+//
+    
+}
+
+extension SavedViewController: UICollectionViewDelegateFlowLayout {
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let size = collectionView.frame.width
+        return CGSize(width: size, height: size * 0.8)
+    }
 
 }
+

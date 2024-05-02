@@ -34,7 +34,7 @@ class CollectionViewCell: UICollectionViewCell {
         Post(name: "Boby", images: ["food_image", "food_image", "food_image"])
     ]
     
-    // MARK: ini
+    // MARK: init
     
     override init(frame: CGRect) {
         super.init(frame: frame)
