@@ -17,7 +17,7 @@ class CollectionViewCell: UICollectionViewCell {
     private let foodImage2 = UIImageView()
     private let heartButton = UIButton()
     private let savedButton = UIButton()
-    private let redButton = UIButton()
+    let redButton = UIButton()
     
     private let scrollView = UIScrollView()
     private let stackView = UIStackView()
@@ -299,9 +299,10 @@ class CollectionViewCell: UICollectionViewCell {
     }
     
     private func setupRedArrow() {
-        let red_Button = UIImage(named: "red_arrow")
+        let red_Button = UIImage(named: "red_arrow2")
         redButton.backgroundColor = UIColor.white
         redButton.setImage(red_Button, for: .normal)
+//        redButton.addTarget(self, action: #selector(pushProfile), for: .touchUpInside)
         
         contentView.addSubview(redButton)
         redButton.translatesAutoresizingMaskIntoConstraints = false
@@ -322,6 +323,7 @@ class CollectionViewCell: UICollectionViewCell {
         self.savedButton.setImage(UIImage(named: "bookmark_filled"), for: .normal)
     }
     
+    
 }
 
 // MARK: - UICollectionView Delegate
@@ -339,12 +341,16 @@ extension CollectionViewCell: UICollectionViewDataSource{
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+                                 
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HorizontalCollectionViewCell.reuse, for: indexPath) as? HorizontalCollectionViewCell, let imageName = post?.images[indexPath.item] else {
                     return UICollectionViewCell()
                 }
-                cell.configure(UIImage(named: imageName))
+        
+            cell.configure(UIImage(named: imageName))
             return cell
     }
+                                     
+                                     
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout

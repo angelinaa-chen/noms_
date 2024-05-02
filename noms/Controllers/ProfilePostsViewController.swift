@@ -7,11 +7,14 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class ProfilePostViewController: UIViewController {
     
     // MARK: - Properties (view)
     
     private let nameLabel = UILabel()
+    
+//    private weak var delegate: UpdateTextDelegate?
+//    private weak var delegate2: UpdateTextDelegate?
     
     // MARK: - viewDidLoad
     override func viewDidLoad() {
@@ -24,7 +27,7 @@ class ProfileViewController: UIViewController {
     // MARK: - Set Up Views
     
     private func setupNameLabel() {
-        nameLabel.text = "Profile Posts Go Here"
+        nameLabel.text = "Profile / Meal Plan"
         nameLabel.font = .systemFont(ofSize: 24)
         nameLabel.textColor = UIColor.black
 

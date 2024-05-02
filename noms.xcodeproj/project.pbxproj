@@ -20,6 +20,9 @@
 		2C504F832BE1DC7100BFCFF2 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C504F822BE1DC7100BFCFF2 /* Post.swift */; };
 		2C504F852BE1DC8100BFCFF2 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C504F842BE1DC8100BFCFF2 /* CollectionViewCell.swift */; };
 		2C504F872BE1DC9100BFCFF2 /* HorizontalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C504F862BE1DC9100BFCFF2 /* HorizontalCollectionViewCell.swift */; };
+		2C504F892BE2D6D100BFCFF2 /* Profile_Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C504F882BE2D6D100BFCFF2 /* Profile_Post.swift */; };
+		2C504F8B2BE3159E00BFCFF2 /* ProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C504F8A2BE3159E00BFCFF2 /* ProfileCollectionViewCell.swift */; };
+		2C504F8D2BE316B800BFCFF2 /* ProfilePostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C504F8C2BE316B800BFCFF2 /* ProfilePostsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,9 @@
 		2C504F822BE1DC7100BFCFF2 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		2C504F842BE1DC8100BFCFF2 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		2C504F862BE1DC9100BFCFF2 /* HorizontalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCollectionViewCell.swift; sourceTree = "<group>"; };
+		2C504F882BE2D6D100BFCFF2 /* Profile_Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile_Post.swift; sourceTree = "<group>"; };
+		2C504F8A2BE3159E00BFCFF2 /* ProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCollectionViewCell.swift; sourceTree = "<group>"; };
+		2C504F8C2BE316B800BFCFF2 /* ProfilePostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePostsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +83,7 @@
 				2C504F812BE1DC6300BFCFF2 /* Models */,
 				2C504F842BE1DC8100BFCFF2 /* CollectionViewCell.swift */,
 				2C504F862BE1DC9100BFCFF2 /* HorizontalCollectionViewCell.swift */,
+				2C504F8A2BE3159E00BFCFF2 /* ProfileCollectionViewCell.swift */,
 				2C504F672BE1DBCB00BFCFF2 /* Main.storyboard */,
 				2C504F6A2BE1DBCC00BFCFF2 /* Assets.xcassets */,
 				2C504F6C2BE1DBCC00BFCFF2 /* LaunchScreen.storyboard */,
@@ -92,6 +99,7 @@
 				2C504F762BE1DC1400BFCFF2 /* ProfileViewController.swift */,
 				2C504F782BE1DC1C00BFCFF2 /* TabViewController.swift */,
 				2C504F7A2BE1DC2400BFCFF2 /* SavedViewController.swift */,
+				2C504F8C2BE316B800BFCFF2 /* ProfilePostsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -108,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				2C504F822BE1DC7100BFCFF2 /* Post.swift */,
+				2C504F882BE2D6D100BFCFF2 /* Profile_Post.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -187,12 +196,15 @@
 				2C504F802BE1DC5400BFCFF2 /* UIColor+Extension.swift in Sources */,
 				2C504F7B2BE1DC2400BFCFF2 /* SavedViewController.swift in Sources */,
 				2C504F852BE1DC8100BFCFF2 /* CollectionViewCell.swift in Sources */,
+				2C504F892BE2D6D100BFCFF2 /* Profile_Post.swift in Sources */,
 				2C504F662BE1DBCB00BFCFF2 /* ViewController.swift in Sources */,
 				2C504F832BE1DC7100BFCFF2 /* Post.swift in Sources */,
 				2C504F622BE1DBCB00BFCFF2 /* AppDelegate.swift in Sources */,
 				2C504F772BE1DC1400BFCFF2 /* ProfileViewController.swift in Sources */,
 				2C504F792BE1DC1C00BFCFF2 /* TabViewController.swift in Sources */,
+				2C504F8B2BE3159E00BFCFF2 /* ProfileCollectionViewCell.swift in Sources */,
 				2C504F642BE1DBCB00BFCFF2 /* SceneDelegate.swift in Sources */,
+				2C504F8D2BE316B800BFCFF2 /* ProfilePostsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

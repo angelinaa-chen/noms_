@@ -109,10 +109,22 @@ extension ViewController: UICollectionViewDataSource {
             return UICollectionViewCell()
         }
         
+        cell.redButton.tag = indexPath.row
+        cell.redButton.addTarget(self,action: #selector(self.pushProfile),
+            for: .touchUpInside)
+        
         cell.configure(with:posts[indexPath.row])
         
         return cell
     }
+    
+    @objc private func pushProfile() {
+        let ProfilePostViewController = ProfilePostViewController()
+                                             
+        self.navigationController?.pushViewController(ProfilePostViewController, animated: true)
+    }
+    
+    
     
 }
 
