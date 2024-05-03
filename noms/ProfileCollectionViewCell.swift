@@ -14,9 +14,10 @@ class ProfileCollectionViewCell: UICollectionViewCell {
     private var profilePost: Profile_Post?
     private let foodImage = UIImageView()
     private let foodName = UILabel()
-    private let foodMeal = UILabel()
+    private let foodMeal = UIButton()
     private let foodDescription = UILabel()
     private let roundedView = UIView()
+    private let foodDesc = UITextView()
 
     
     override init(frame: CGRect) {
@@ -29,6 +30,7 @@ class ProfileCollectionViewCell: UICollectionViewCell {
         setupFoodMeal()
         setupFoodDescription()
         
+//        setupFoodDesc()
 //        setupCollectionView()
         
 //        setupProfileImage()
@@ -36,7 +38,7 @@ class ProfileCollectionViewCell: UICollectionViewCell {
 //        setupDate()
 //        setupRedArrow()
 
-        setupRoundedText()
+//        setupRoundedText()
 
     }
     
@@ -47,8 +49,10 @@ class ProfileCollectionViewCell: UICollectionViewCell {
     func configure(profilePost: Profile_Post) {
         foodImage.image = UIImage(named: profilePost.image)
         foodName.text = profilePost.name
-        foodMeal.text = profilePost.meal
+        foodMeal.setTitle(profilePost.meal, for: .normal)
+//        foodMeal.text = profilePost.meal
         foodDescription.text = profilePost.description
+        foodDesc.text = profilePost.description
     }
     
     private func setupFoodImage() {
@@ -77,6 +81,7 @@ class ProfileCollectionViewCell: UICollectionViewCell {
         foodName.font = .systemFont(ofSize:18, weight: .medium)
         
         
+        
         contentView.addSubview(foodName)
         foodName.translatesAutoresizingMaskIntoConstraints = false
         
@@ -88,15 +93,31 @@ class ProfileCollectionViewCell: UICollectionViewCell {
     
     
     private func setupFoodMeal() {
-        foodMeal.text = "Unnamed (again)"
-        foodMeal.textColor = UIColor.white
-        foodMeal.font = .systemFont(ofSize: 11, weight: .medium)
+        foodMeal.setTitle("Unnamed again", for: .normal)
+        foodMeal.titleLabel?.font = .systemFont(ofSize: 11, weight: .medium)
+        foodMeal.setTitleColor(UIColor.white, for: .normal)
+        foodMeal.backgroundColor = UIColor.a3.light_red
+        foodMeal.layer.cornerRadius = 10
+        foodMeal.contentEdgeInsets = UIEdgeInsets(top: 4, left: 20, bottom: 4, right: 20)
+
+
+
+
+//        foodMeal.text = "Unnamed (again)"
+//        foodMeal.textColor = UIColor.white
+//        foodMeal.font = .systemFont(ofSize: 11, weight: .medium)
+//        foodMeal.backgroundColor = UIColor.a3.light_red
+//        foodMeal.layer.cornerRadius = 16
+//        foodMeal.clipsToBounds = true
+//        foodMeal.contentEdgeInsets = UIEdgeInsets(top: 4, left: 8, bottom: 4, right: 8)
+
+
         
         contentView.addSubview(foodMeal)
         foodMeal.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            foodMeal.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+            foodMeal.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             foodMeal.topAnchor.constraint(equalTo: foodName.bottomAnchor, constant: 7)
         ])
         
@@ -108,6 +129,7 @@ class ProfileCollectionViewCell: UICollectionViewCell {
         foodDescription.text = "Unnamed (again)"
         foodDescription.textColor = UIColor.lightGray
         foodDescription.font = .systemFont(ofSize:14, weight: .medium)
+        foodDescription.numberOfLines = 5
         
         contentView.addSubview(foodDescription)
         foodDescription.translatesAutoresizingMaskIntoConstraints = false
@@ -117,6 +139,23 @@ class ProfileCollectionViewCell: UICollectionViewCell {
             foodDescription.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             foodDescription.topAnchor.constraint(equalTo: foodMeal.bottomAnchor, constant: 13)
         ])
+    }
+    
+    private func setupFoodDesc() {
+        foodDesc.font = .systemFont(ofSize: 10, weight: .semibold)
+        foodDesc.textColor = UIColor.lightGray
+        foodDesc.textAlignment = .left
+        foodDesc.text = "If you're reading this it didn't work :("
+        
+        contentView.addSubview(foodDesc)
+        foodDesc.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            foodDesc.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            foodDesc.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
+//            foodDesc.topAnchor.constraint(equalTo: foodMeal.bottomAnchor, constant: 13)
+        ])
+        
     }
     
     private func setupRoundedText() {
