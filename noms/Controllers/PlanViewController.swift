@@ -13,6 +13,7 @@ class PlanViewController: UIViewController {
     // MARK: - Properties (view)
     
     private let nameLabel = UILabel()
+    private let phraseLabel = UILabel()
     private let monthLabel = UILabel()
     private let burgerImage = UIImageView()
     private var collectionView: UICollectionView!
@@ -43,6 +44,7 @@ class PlanViewController: UIViewController {
         view.backgroundColor = UIColor.white
         
         setupNameLabel()
+        setupPhraseLabel()
         setupBurgerImage()
         setupMonthLabel()
         
@@ -67,7 +69,7 @@ class PlanViewController: UIViewController {
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            collectionView.topAnchor.constraint(equalTo: monthLabel.bottomAnchor, constant: 15),
+            collectionView.topAnchor.constraint(equalTo: monthLabel.bottomAnchor, constant: 10),
             collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 35),
             collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -35),
             collectionView.heightAnchor.constraint(equalToConstant: 50)
@@ -78,7 +80,7 @@ class PlanViewController: UIViewController {
     private func setupCollectionView2() {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
-        layout.minimumLineSpacing = 10
+        layout.minimumLineSpacing = 15
         layout.minimumInteritemSpacing = 100
         
         collectionView2 = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -90,17 +92,30 @@ class PlanViewController: UIViewController {
         collectionView2.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            collectionView2.topAnchor.constraint(equalTo: collectionView.bottomAnchor, constant: 20),
-            collectionView2.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 35),
-            collectionView2.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -35),
+            collectionView2.topAnchor.constraint(equalTo: collectionView.bottomAnchor, constant: 23),
+            collectionView2.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 25),
+            collectionView2.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -25),
 //            collectionView2.heightAnchor.constraint(equalToConstant: 50)
             collectionView2.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
     
+    private func setupPhraseLabel() {
+        phraseLabel.text = "Plan your perfect plate."
+        phraseLabel.font = UIFont.systemFont(ofSize: 14, weight: .regular)
+        phraseLabel.textColor = UIColor.gray
+        
+        view.addSubview(phraseLabel)
+        phraseLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            phraseLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 4),
+            phraseLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30)
+        ])
+    }
     
     private func setupNameLabel() {
-        nameLabel.text = "Your Munch Plan"
+        nameLabel.text = "Your Meal Plan"
         nameLabel.font = UIFont.boldSystemFont(ofSize: 24)
         nameLabel.textColor = UIColor.a3.coral
 
@@ -121,7 +136,7 @@ class PlanViewController: UIViewController {
         burgerImage.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            burgerImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 150),
+            burgerImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 167),
             burgerImage.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
             burgerImage.widthAnchor.constraint(equalToConstant: 40),
             burgerImage.heightAnchor.constraint(equalToConstant: 40)
@@ -137,7 +152,7 @@ class PlanViewController: UIViewController {
         monthLabel.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
-            monthLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 157),
+            monthLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 174),
             monthLabel.leadingAnchor.constraint(equalTo: burgerImage.trailingAnchor, constant: 5),
 //            munchLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])

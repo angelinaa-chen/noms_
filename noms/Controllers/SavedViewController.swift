@@ -16,11 +16,11 @@ class SavedViewController: UIViewController {
     
     // MARK: - Properties (data)
     private var noms: [Nom] = [
-        Nom(name: "Avocado Toast", image: "food_image", meal: "Breakfast", description: "This was really good"),
-        Nom(name: "French Toast", image: "food_image", meal: "Breakfast", description: "This was really good"),
-        Nom(name: "Caesar Salad", image: "food_image", meal: "Lunch", description: "This was really good"),
-        Nom(name: "Shrimp Fried Rice", image: "food_image", meal: "Lunch", description: "This was really good"),
-        Nom(name: "Pasta", image: "food_image", meal: "Dinner", description: "This was really good")
+        Nom(name: "Avocado Toast", image: "food_image", meal: "Breakfast", description: "Made with thick sliced whole grain, topped with perfectly ripe avocado mashed to creamy perfection."),
+        Nom(name: "Pho", image: "food_image", meal: "Breakfast", description: "Crafted with thinly sliced tender beef and rice noodles, simmered in a rich, aromatic broth infused with traditional Vietnamese spices."),
+        Nom(name: "Chicken Alfredo", image: "food_image", meal: "Dinner", description: "Food"),
+        Nom(name: "Chicken Alfredo", image: "food_image", meal: "Dinner", description: "Food"),
+        Nom(name: "Chicken Alfredo", image: "food_image", meal: "Dinner", description: "Food"),
 
     ]
     
@@ -46,8 +46,8 @@ class SavedViewController: UIViewController {
         pageLabel.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            pageLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: -16),
-            pageLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 24),
+            pageLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
+            pageLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
 //            munchLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
     }
@@ -72,7 +72,7 @@ class SavedViewController: UIViewController {
         NSLayoutConstraint.activate([
             collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
             collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
-            collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 48),
+            collectionView.topAnchor.constraint(equalTo: pageLabel.bottomAnchor, constant: 20),
             collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -10)
         ])
     }
