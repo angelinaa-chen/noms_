@@ -28,6 +28,7 @@
 		443A997E2BE3286000999D2C /* SavedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443A997D2BE3286000999D2C /* SavedCollectionViewCell.swift */; };
 		443A99802BE32B5D00999D2C /* Nom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443A997F2BE32B5D00999D2C /* Nom.swift */; };
 		448315612BE477C100E9410E /* PlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448315602BE477C100E9410E /* PlanViewController.swift */; };
+		448315652BE491BC00E9410E /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448315642BE491BC00E9410E /* CreatePostViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		443A997D2BE3286000999D2C /* SavedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedCollectionViewCell.swift; sourceTree = "<group>"; };
 		443A997F2BE32B5D00999D2C /* Nom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nom.swift; sourceTree = "<group>"; };
 		448315602BE477C100E9410E /* PlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanViewController.swift; sourceTree = "<group>"; };
+		448315642BE491BC00E9410E /* CreatePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				2C504F7A2BE1DC2400BFCFF2 /* SavedViewController.swift */,
 				2C504F8C2BE316B800BFCFF2 /* ProfilePostsViewController.swift */,
 				448315602BE477C100E9410E /* PlanViewController.swift */,
+				448315642BE491BC00E9410E /* CreatePostViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 				2C504F662BE1DBCB00BFCFF2 /* ViewController.swift in Sources */,
 				2C504F832BE1DC7100BFCFF2 /* Post.swift in Sources */,
 				2C504F622BE1DBCB00BFCFF2 /* AppDelegate.swift in Sources */,
+				448315652BE491BC00E9410E /* CreatePostViewController.swift in Sources */,
 				2C504F772BE1DC1400BFCFF2 /* ProfileViewController.swift in Sources */,
 				2C504F792BE1DC1C00BFCFF2 /* TabViewController.swift in Sources */,
 				2C504F8B2BE3159E00BFCFF2 /* ProfileCollectionViewCell.swift in Sources */,
