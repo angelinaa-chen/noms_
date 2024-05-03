@@ -82,7 +82,7 @@ class PlanCollectionViewCell: UICollectionViewCell {
 //        nomImage.clipsToBounds = true
 //        nomImage.contentMode = .scaleAspectFit
         nomImage.layer.masksToBounds = true
-        nomImage.layer.cornerRadius = 8  // Set corner radius to 8 pixels
+        nomImage.layer.cornerRadius = 10  // Set corner radius to 8 pixels
         
         contentView.addSubview(nomImage)
         nomImage.translatesAutoresizingMaskIntoConstraints = false
@@ -105,7 +105,7 @@ class PlanCollectionViewCell: UICollectionViewCell {
         
         NSLayoutConstraint.activate([
             nomName.leadingAnchor.constraint(equalTo: nomImage.trailingAnchor, constant: 16),
-            nomName.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
+            nomName.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 24),
             nomName.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16)
             // TODO: Add trailing constraint for button
         ])
@@ -115,7 +115,7 @@ class PlanCollectionViewCell: UICollectionViewCell {
         nomType.font = UIFont.systemFont(ofSize: 10, weight: .medium)
         nomType.backgroundColor = UIColor.a3.orange
         nomType.textColor = UIColor.white
-        nomType.layer.cornerRadius = 10 // Adjust as needed
+        nomType.layer.cornerRadius = 8
         nomType.clipsToBounds = true
         nomType.textAlignment = .center
         
@@ -123,7 +123,7 @@ class PlanCollectionViewCell: UICollectionViewCell {
         nomType.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            nomType.topAnchor.constraint(equalTo: nomName.bottomAnchor, constant: 4),
+            nomType.topAnchor.constraint(equalTo: nomName.bottomAnchor, constant: 6),
             nomType.leadingAnchor.constraint(equalTo: nomImage.trailingAnchor, constant: 16),
             nomType.heightAnchor.constraint(equalToConstant: 18) // Adjust based on your design
         ])
@@ -141,8 +141,8 @@ class PlanCollectionViewCell: UICollectionViewCell {
         nomDescription.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            nomDescription.topAnchor.constraint(equalTo: nomType.bottomAnchor, constant: 12),
-            nomDescription.leadingAnchor.constraint(equalTo: nomImage.trailingAnchor, constant: 16),
+            nomDescription.topAnchor.constraint(equalTo: nomType.bottomAnchor, constant: 5),
+            nomDescription.leadingAnchor.constraint(equalTo: nomImage.trailingAnchor, constant: 12),
             nomDescription.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
 //            nomDescription.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -16)
             nomDescription.bottomAnchor.constraint(equalTo: nomImage.bottomAnchor) // Align bottom with nomImage
