@@ -23,6 +23,7 @@ extension UIColor {
         let darkGreen = UIColor(red: 0/255, green: 100/255, blue: 0/255, alpha: 1)
         let coral = UIColor(red: 250/255, green: 50/255, blue: 10/255, alpha: 10)
         let light_red = UIColor(red: 255/255, green: 100/255, blue: 50/255, alpha: 1)
+        let orange = UIColor(red: 244/255, green: 149/255, blue: 45/255, alpha: 1)
         }
         
     

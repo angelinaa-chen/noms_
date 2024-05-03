@@ -18,7 +18,9 @@ class SavedViewController: UIViewController {
     private var noms: [Nom] = [
         Nom(name: "Avocado Toast", image: "food_image", meal: "Breakfast", description: "This was really good"),
         Nom(name: "French Toast", image: "food_image", meal: "Breakfast", description: "This was really good"),
-        Nom(name: "Caesar Salad", image: "food_image", meal: "Lunch", description: "This was really good")
+        Nom(name: "Caesar Salad", image: "food_image", meal: "Lunch", description: "This was really good"),
+        Nom(name: "Shrimp Fried Rice", image: "food_image", meal: "Lunch", description: "This was really good"),
+        Nom(name: "Pasta", image: "food_image", meal: "Dinner", description: "This was really good")
 
     ]
     
@@ -66,16 +68,11 @@ class SavedViewController: UIViewController {
         view.addSubview(collectionView)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         
-//        NSLayoutConstraint.activate([
-//            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 32),
-//            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -32),
-//            collectionView.topAnchor.constraint(equalTo: pageLabel.topAnchor, constant: 24),
-//            collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -10)
-//        ])
+
         NSLayoutConstraint.activate([
             collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
             collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
-            collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 24),
+            collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 48),
             collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -10)
         ])
     }
@@ -123,7 +120,7 @@ extension SavedViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let size = collectionView.frame.width
-        return CGSize(width: size, height: size * 0.8)
+        return CGSize(width: size, height: 160)
     }
 
 }
