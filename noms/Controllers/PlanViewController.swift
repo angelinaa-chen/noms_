@@ -16,6 +16,7 @@ class PlanViewController: UIViewController {
     private let monthLabel = UILabel()
     private let burgerImage = UIImageView()
     private var collectionView: UICollectionView!
+    private var collectionView2: UICollectionView!
 
     
     private var calendar: [Calendar] = [
@@ -45,6 +46,7 @@ class PlanViewController: UIViewController {
         setupMonthLabel()
         
         setupCollectionView()
+        setupCollectionView2()
     }
     
     // MARK: - Set Up Views
@@ -71,6 +73,30 @@ class PlanViewController: UIViewController {
 //            collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
+    
+    private func setupCollectionView2() {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        layout.minimumLineSpacing = 10
+        layout.minimumInteritemSpacing = 100
+        
+        collectionView2 = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView2.register(PlanCollectionViewCell.self, forCellWithReuseIdentifier: PlanCollectionViewCell.reuse)
+        collectionView2.delegate = self
+        collectionView2.dataSource = self
+        
+        view.addSubview(collectionView2)
+        collectionView2.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            collectionView2.topAnchor.constraint(equalTo: collectionView.bottomAnchor, constant: 20),
+            collectionView2.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 35),
+            collectionView2.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -35),
+//            collectionView2.heightAnchor.constraint(equalToConstant: 50)
+            collectionView2.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
+    }
+    
     
     private func setupNameLabel() {
         nameLabel.text = "Your Munch Plan"
@@ -130,17 +156,38 @@ extension PlanViewController: UICollectionViewDelegate {
 
 extension PlanViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return calendar.count
+        if collectionView == collectionView2 {
+            return date_posts.count
+        } else {
+            return calendar.count
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CalendarCollectionViewCell.reuse, for: indexPath) as? CalendarCollectionViewCell else {
-            return UICollectionViewCell()
+        
+        
+        if collectionView == collectionView2 {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PlanCollectionViewCell.reuse, for: indexPath) as? PlanCollectionViewCell else {
+                return UICollectionViewCell()
+            }
+
+            cell.configure(nom: date_posts[indexPath.item])
+            return cell
+        } else {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CalendarCollectionViewCell.reuse, for: indexPath) as? CalendarCollectionViewCell else {
+                return UICollectionViewCell()
+            }
+
+            cell.configure(calendar: calendar[indexPath.item])
+            return cell
         }
-        
-        cell.configure(calendar: calendar[indexPath.row])
-        
-        return cell
+//        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CalendarCollectionViewCell.reuse, for: indexPath) as? CalendarCollectionViewCell else {
+//            return UICollectionViewCell()
+//        }
+//
+//        cell.configure(calendar: calendar[indexPath.row])
+//
+//        return cell
     }
     
     
@@ -154,8 +201,13 @@ extension PlanViewController: UICollectionViewDataSource {
 extension PlanViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let size = collectionView.frame.width / 8
-        return CGSize(width: size, height: size)
+        if collectionView == collectionView2 {
+            let size = collectionView.frame.width
+            return CGSize(width: size, height: 160)
+        } else {
+            let size = collectionView.frame.width / 8
+            return CGSize(width: size, height: size)
+        }
     }
     
 }
