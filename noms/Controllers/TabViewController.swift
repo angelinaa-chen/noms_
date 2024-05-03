@@ -60,7 +60,12 @@ class TabViewController: UITabBarController {
         ])
 
         // Add action
-//        fabButton.addTarget(self, action: #selector(fabTapped), for: .touchUpInside)
+        fabButton.addTarget(self, action: #selector(fabTapped), for: .touchUpInside)
+    }
+    
+    @objc func fabTapped() {
+        let createPostVC = CreatePostViewController()
+        present(createPostVC, animated: true)
     }
     
 }
