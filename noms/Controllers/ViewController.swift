@@ -18,9 +18,10 @@ class ViewController: UIViewController {
     
     // MARK: - Properties (data)
     private var posts: [Post] = [
-        Post(name: "Bob", images: ["food_image", "food_image", "food_image"]),
-        Post(name: "Bobby", images: ["food_image", "food_image", "food_image"]),
-        Post(name: "Boby", images: ["food_image", "food_image", "food_image"])
+        Post(name: "walkerwhite1110", images: ["avocado_toast", "caesar_salad", "vegetarian_chili"]),
+        Post(name: "emily.thomas554", images: ["parfait", "tomato_soup", "beef_stirfry"]),
+        Post(name: "alexcheese7", images: ["banana_pancakes", "quinoa_salad", "baked_salmon"]),
+        Post(name: "jane_doe", images: ["sesame_bagel", "vegetable_lasagna", "beef_bourguignon"])
     ]
     
     override func viewDidLoad() {

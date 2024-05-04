@@ -16,11 +16,12 @@ class SavedViewController: UIViewController {
     
     // MARK: - Properties (data)
     private var noms: [Nom] = [
-        Nom(name: "Avocado Toast", image: "food_image", meal: "Breakfast", description: "Made with thick sliced whole grain, topped with perfectly ripe avocado mashed to creamy perfection."),
-        Nom(name: "Pho", image: "food_image", meal: "Breakfast", description: "Crafted with thinly sliced tender beef and rice noodles, simmered in a rich, aromatic broth infused with traditional Vietnamese spices."),
-        Nom(name: "Chicken Alfredo", image: "food_image", meal: "Dinner", description: "Food"),
-        Nom(name: "Chicken Alfredo", image: "food_image", meal: "Dinner", description: "Food"),
-        Nom(name: "Chicken Alfredo", image: "food_image", meal: "Dinner", description: "Food"),
+        Nom(name: "Avocado Toast", image: "avocado_toast", meal: "Breakfast", description: "Made with thick sliced whole grain, topped with perfectly ripe avocado mashed to creamy perfection."),
+        Nom(name: "Beef Stif-fry", image: "beef_stirfry", meal: "Dinner", description: "A sizzling concoction of tender beef strips and vibrant vegetables, stir-fried to perfection."),
+        Nom(name: "Banana Pancakes", image: "banana_pancakes", meal: "Breakfast", description: "Fluffy pancakes with banana flavor, topped with syrup and butter."),
+        Nom(name: "Vegetable Lasagna", image: "vegetable_lasagna", meal: "Lunch", description: "Layers of pasta, veggies, and cheese, baked until bubbly."),
+        Nom(name: "Sesame Bagel", image: "sesame_bagel", meal: "Breakfast", description: "A classic bagel coated with sesame seeds for a crunchy exterior. Perfect for spreading with your favorite cream cheese or  toppings."),
+        Nom(name: "Pho", image: "food_image", meal: "Lunch", description: "Crafted with thinly sliced tender beef and rice noodles, simmered in a rich, aromatic broth."),
 
     ]
     

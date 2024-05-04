@@ -23,6 +23,7 @@ class HorizontalCollectionViewCell: UICollectionViewCell {
     private let foodLabel = UILabel()
     private let mealLabel = UILabel()
     
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupFoodImage()
@@ -37,7 +38,7 @@ class HorizontalCollectionViewCell: UICollectionViewCell {
     }
     
     private func setupMealLabel() {
-        mealLabel.text = "Dinner"
+        mealLabel.text = "Breakfast"
         mealLabel.textColor = UIColor.lightGray
         mealLabel.font = .systemFont(ofSize:10, weight: .medium)
         
@@ -52,7 +53,7 @@ class HorizontalCollectionViewCell: UICollectionViewCell {
     }
 
     private func setupFoodLabel() {
-        foodLabel.text = "Fried Rice"
+        foodLabel.text = "Avocado Toast"
         foodLabel.textColor = UIColor.black
         foodLabel.font = .systemFont(ofSize:12, weight: .medium)
         

@@ -20,9 +20,9 @@ class ProfilePostViewController: UIViewController {
     // MARK: - Properties (data)
     
     private var profile_posts: [Profile_Post] = [
-        Profile_Post(name: "Avocado Toast", image: "food_image", meal: "Breakfast", description: "Made with thick sliced whole grain, topped with perfectly ripe avocado mashed to creamy perfection."),
-        Profile_Post(name: "Pho", image: "food_image", meal: "Breakfast", description: "Crafted with thinly sliced tender beef and rice noodles, simmered in a rich, aromatic broth infused with traditional Vietnamese spices."),
-        Profile_Post(name: "Chicken Alfredo", image: "food_image", meal: "Dinner", description: "Food")
+        Profile_Post(name: "Greek Yogurt Parfait", image: "parfait", meal: "Breakfast", description: "Creamy Greek yogurt layered with fresh fruits and crunchy granola."),
+        Profile_Post(name: "Tomato Soup with Grilled Cheese", image: "tomato_soup", meal: "Lunch", description: "Crafted with thinly sliced tender beef and rice noodles."),
+        Profile_Post(name: "Beef Stir-Fry", image: "beef_stirfry", meal: "Dinner", description: "Food")
     ]
     
     // MARK: - viewDidLoad
@@ -60,7 +60,7 @@ class ProfilePostViewController: UIViewController {
     
     
     private func setupNameLabel() {
-        nameLabel.text = "Bob"
+        nameLabel.text = "emily.thomas554"
 //        nameLabel.font = .systemFont(ofSize: 24)
         nameLabel.font = UIFont.boldSystemFont(ofSize: 24)
         nameLabel.textColor = UIColor.black

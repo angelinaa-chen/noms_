@@ -50,7 +50,7 @@ class SavedCollectionViewCell: UICollectionViewCell {
         setupPostName()
         setupPostType()
         setupPostDescription()
-//        setupAddButton()
+        setupAddButton()
         
         layer.cornerRadius = 16
 
@@ -66,7 +66,7 @@ class SavedCollectionViewCell: UICollectionViewCell {
         nomName.text = nom.name
 //      image will be an array, how do we change that?
         // use a placeholder image for now
-        nomImage.image = UIImage(named: "food_image")
+        nomImage.image = UIImage(named: nom.image)
         nomDescription.text = nom.description
         nomType.text = nom.meal
         

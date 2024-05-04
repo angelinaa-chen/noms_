@@ -15,7 +15,7 @@ class ProfileCollectionViewCell: UICollectionViewCell {
     private let foodImage = UIImageView()
     private let foodName = UILabel()
     private let foodMeal = UIButton()
-    private let foodDescription = UILabel()
+    private let foodDescription = UITextView()
     private let roundedView = UIView()
     private let foodDesc = UITextView()
 
@@ -126,18 +126,25 @@ class ProfileCollectionViewCell: UICollectionViewCell {
     }
     
     private func setupFoodDescription() {
-        foodDescription.text = "Unnamed (again)"
-        foodDescription.textColor = UIColor.lightGray
-        foodDescription.font = .systemFont(ofSize:14, weight: .medium)
-        foodDescription.numberOfLines = 5
+//        foodDescription.text = "Unnamed (again)"
+//        foodDescription.textColor = UIColor.lightGray
+//        foodDescription.font = .systemFont(ofSize:14, weight: .medium)
         
+        foodDescription.isEditable = false
+        foodDescription.isScrollEnabled = false
+        foodDescription.font = .systemFont(ofSize: 12, weight: .regular)
+        foodDescription.textColor = UIColor.lightGray
+//        foodDescription.backgroundColor = UIColor.a3.offWhite
+
+            
         contentView.addSubview(foodDescription)
         foodDescription.translatesAutoresizingMaskIntoConstraints = false
         
         
         NSLayoutConstraint.activate([
-            foodDescription.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            foodDescription.topAnchor.constraint(equalTo: foodMeal.bottomAnchor, constant: 13)
+            foodDescription.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: -1),
+            foodDescription.topAnchor.constraint(equalTo: foodMeal.bottomAnchor, constant: 6),
+            foodDescription.trailingAnchor.constraint(equalTo: contentView.trailingAnchor)
         ])
     }
     

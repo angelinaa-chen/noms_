@@ -31,10 +31,10 @@ class PlanViewController: UIViewController {
     ]
     
     private var date_posts: [Nom] = [
-        Nom(name: "Avocado Toast", image: "food_image", meal: "Breakfast", description: "Made with thick sliced whole grain, topped with perfectly ripe avocado mashed to creamy perfection."),
-        Nom(name: "Pho", image: "food_image", meal: "Breakfast", description: "Crafted with thinly sliced tender beef and rice noodles, simmered in a rich, aromatic broth infused with traditional Vietnamese spices."),
-        Nom(name: "Caesar Salad", image: "food_image", meal: "Lunch", description: "This was really good"),
-        Nom(name: "Avocado Toast", image: "food_image", meal: "Breakfast", description: "Made with thick sliced whole grain, topped with perfectly ripe avocado mashed to creamy perfection."),
+        Nom(name: "Greek Yogurt Parfait", image: "parfait", meal: "Breakfast", description: "Creamy Greek yogurt layered with fresh fruits and crunchy granola."),
+        Nom(name: "Caesar Salad", image: "caesar_salad", meal: "Lunch", description: "Crisp romaine lettuce tossed in a tangy Caesar dressing, topped with crunchy croutons and a sprinkle of Parmesan cheese."),
+        Nom(name: "Vegetarian Chili", image: "vegetarian_chili", meal: "Lunch", description: "A hearty blend of beans, vegetables, and spices simmered to perfection."),
+        Nom(name: "Beef Bourguignon", image: "food_image", meal: "Dinner", description: "Tender chunks of beef slow-cooked with aromatic herbs, mushrooms, and red wine until rich and flavorful."),
     ]
     
     
