@@ -229,7 +229,7 @@ class CreatePostViewController: UIViewController {
     
     private func setupDatePicker() {
         datePicker.datePickerMode = .date
-        datePicker.preferredDatePickerStyle = .inline // or .inline for iOS 14 and later
+        datePicker.preferredDatePickerStyle = .wheels // or .inline for iOS 14 and later
 //        datePicker.addTarget(self, action: #selector(datePickerChanged(_:)), for: .valueChanged)
 
         view.addSubview(datePicker)
@@ -269,7 +269,7 @@ class CreatePostViewController: UIViewController {
             imageInput.topAnchor.constraint(equalTo: imageLabel.bottomAnchor, constant: 8),
             imageInput.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 24),
             imageInput.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -24),
-            imageInput.bottomAnchor.constraint(equalTo: saveButton.topAnchor, constant: -24)
+            imageInput.bottomAnchor.constraint(equalTo: saveButton.topAnchor, constant: -8)
         ])
     }
     
@@ -279,12 +279,13 @@ class CreatePostViewController: UIViewController {
         saveButton.setTitle("Post", for: .normal)
         saveButton.setTitleColor(UIColor.a3.white, for: .normal)
         saveButton.titleLabel?.font = .systemFont(ofSize: 16, weight: .bold)
-        // saveButton.addTarget(self, action: #selector(createPost), for: .touchUpInside)
+//      saveButton.addTarget(self, action: #selector(createPost), for: .touchUpInside)
+        // have the save button just close the bottom sheet for now
+        saveButton.addTarget(self, action: #selector(dismissViewController), for: .touchUpInside)
         
         view.addSubview(saveButton)
         saveButton.translatesAutoresizingMaskIntoConstraints = false
         
-        let sidePadding: CGFloat = 24
         NSLayoutConstraint.activate([
             saveButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -24),
             saveButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 24),
@@ -299,4 +300,15 @@ class CreatePostViewController: UIViewController {
     @objc func dismissViewController() {
         dismiss(animated: true, completion: nil)  // This will handle the button tap to dismiss the view controller
     }
+    
+    @objc private func createPost() {
+        // TODO: Send a POST request to create a post
+        
+//        let post = Post(id: UUID().uuidString, time: Date(), message: message, likes: [])
+        
+//        NetworkManager.shared.addPost(post: post) { post in
+//            // Do something
+//        }
+    }
+
 }
