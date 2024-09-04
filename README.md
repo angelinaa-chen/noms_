@@ -2,10 +2,19 @@
 
 #### Front-end Developers: Angelina Chen, Tiffany Lee
 
+<br />
+
+<img width="1000" alt="noms_ss" src="https://github.com/user-attachments/assets/b805234e-7ce2-4aa0-b59f-89445f1d79a0">
+
+<br />
+<br />
+
 
 View noms' **back-end** here: https://github.com/Henry262799/noms-db
 
 View our **Figma design** here: https://www.figma.com/design/D7OjZYVLTsXZk6HIoNmPtB/HACK-CHALLENGE---NOMS?node-id=1-4
+
+<br />
 
 College students struggle to keep track of what they’re eating and often resort to simple, often unhealthy meals when they’re feeling lazy or uninspired; our app aims to couter that! Through noms, we aim to help users make healthier eating habits by keeping track of their daily meals, and finding inspiration socially through what other people are eating or making.
 
