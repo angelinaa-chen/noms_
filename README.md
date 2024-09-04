@@ -2,9 +2,12 @@
 
 #### Front-end Developers: Angelina Chen, Tiffany Lee
 
-View our back-end here:
+
+View noms' back-end here: https://github.com/Henry262799/noms-db
+
 
 College students struggle to keep track of what they’re eating and often resort to simple, often unhealthy meals when they’re feeling lazy or uninspired; our app aims to couteract that! Through noms, we aim to help users make healthier eating habits by keeping track of their daily meals, and finding inspiration socially through what other people are eating or making.
+
 
 
 ## Home Screen
@@ -13,6 +16,7 @@ When opening the app, users are brought to a homescreen where they can view the 
 
 <img width="474" alt="Screenshot 2024-09-04 at 6 15 00 PM" src="https://github.com/user-attachments/assets/f2fa5e48-746f-4b34-8f46-20c5570e501c">
 <img width="474" alt="Screenshot 2024-09-04 at 6 14 56 PM" src="https://github.com/user-attachments/assets/da7c8823-b546-4dba-800c-3badade8d678">
+
 
 
 ## Meal-Planning
@@ -26,7 +30,8 @@ Users can then view their current weekly meal plan by selecting the "Plan" optio
 <img width="474" alt="Screenshot 2024-09-04 at 6 18 31 PM" src="https://github.com/user-attachments/assets/cd74c374-09af-4cc6-8f8d-a3525d19a5c6">
 
 
-# Favoriting and Saving noms
+
+## Favoriting and Saving noms
 
 On the homescreen, users have the option to like or save any noms they want to view for later. These noms can then be viewed in the "Saved" view.
 
@@ -34,19 +39,20 @@ On the homescreen, users have the option to like or save any noms they want to v
 <img width="474" alt="Screenshot 2024-09-04 at 6 24 26 PM" src="https://github.com/user-attachments/assets/64993ccb-5cc1-4253-8f51-a67fafb49064">
 
 
-# Profile View
+
+## Profile View
 
 Users can view their profile and username, along with their current and past noms on the profile page.
 
-Hey Bill Nye!
 <img width="474" alt="Screenshot 2024-09-04 at 6 27 44 PM" src="https://github.com/user-attachments/assets/55b7cb0d-cf9f-4460-8e07-1b30f7e45c27">
 
 
-# Future Work
+
+## Future Work
 
 A majority of this app is purely front-end, and still needs to be conencted to the back-end. Moving foward, many features would need to be implemented to their proper functionality!
 
-## Note: This project was awarded the Best UI for the 2024 AppDev Hack Challenge.
+This project was awarded Best UI for the 2024 AppDev Hack Challenge. (:
 
 
 
