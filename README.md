@@ -6,7 +6,7 @@
 View noms' back-end here: https://github.com/Henry262799/noms-db
 
 
-College students struggle to keep track of what they’re eating and often resort to simple, often unhealthy meals when they’re feeling lazy or uninspired; our app aims to couteract that! Through noms, we aim to help users make healthier eating habits by keeping track of their daily meals, and finding inspiration socially through what other people are eating or making.
+College students struggle to keep track of what they’re eating and often resort to simple, often unhealthy meals when they’re feeling lazy or uninspired; our app aims to couter that! Through noms, we aim to help users make healthier eating habits by keeping track of their daily meals, and finding inspiration socially through what other people are eating or making.
 
 
 
@@ -21,9 +21,9 @@ When opening the app, users are brought to a homescreen where they can view the 
 
 ## Meal-Planning
 
-To add a meal to their future meal plan, users can click the large plus button on the right hand corner, and assign a nom name, description, meal type, and an iaage url that adds the nom to their meal plan for that date.
+To add a meal to their future meal plan, users can click the large plus button on the right hand corner, and assign a nom name, description, meal type, and an image url that adds the nom to their meal plan for that date.
 
-Users can then view their current weekly meal plan by selecting the "Plan" option on the navigation bar, bringing them to a collective view of their current noms for the week that can be further categorized when selecting a date as well.
+Users can then view their current weekly meal plan by selecting the "Plan" option on the navigation bar, bringing them to a collective view of their current noms for the week, which can be further categorized when selecting a date.
 
 <img width="400" alt="Screenshot 2024-09-04 at 6 19 08 PM" src="https://github.com/user-attachments/assets/8715b36a-c779-4c5a-843e-82e6a4bc7376">
 
